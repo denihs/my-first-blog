@@ -1,0 +1,10 @@
+.cabecalho-post h1{
+  text-align: center;
+  font-size: 48px;
+}
+.cabecalho-post {
+  display: inline;
+}
+.cabecalho-pagina {
+    display: none;
+}
