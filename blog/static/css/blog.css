@@ -85,7 +85,7 @@ article {
   }
 
 }
-@media all and  (max-width: 500px) and (min-width: 320px){
+@media all and  (max-width: 500px){
 
   .cabecalho-post h1{
     text-align: center;
@@ -98,4 +98,16 @@ article {
       display: none;
   }
 
+}
+@media screen and (min-width: 320px) {
+  .cabecalho-post h1{
+    text-align: center;
+    font-size: 48px;
+  }
+  .cabecalho-post {
+    display: inline;
+  }
+  .cabecalho-pagina {
+      display: none;
+  }
 }
