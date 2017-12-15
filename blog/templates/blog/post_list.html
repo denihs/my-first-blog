@@ -8,7 +8,16 @@
 </head>
 
 <body>
-    <h1>Hey buddy!</h1>
+    <h1>Django Blog</h1>
+    <section>
+      {% for post in posts %}
+          <article>
+              <p>Published: {{ post.published_date }}</p>
+              <h1>{{ post.title }}</h1>
+              <p>{{ post.text|linebreaksbr }}</p>
+          </article>
+      {% endfor %}
+    </section>
 </body>
 
 </html>
