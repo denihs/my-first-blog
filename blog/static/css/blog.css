@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+}
+
+.site {
+  margin: 5px auto;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.titulo {
+    color: black;
+  text-align: left;
+}
+
+article {
+  margin: 10px 10px 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  padding: 0 10px;
+}
+
+.cabecalho-pagina {
+  margin: 0;
+  height: 70px;
+
+
+  background-image: linear-gradient(to right, orange , white 80%, orange);
+  background-color: orange;
+
+  display: flex;
+  align-items: center;
+
+}
+
+
+.cabecalho-pagina h1{
+    color: white;
+    margin: 0 0 0 30px;
+    padding: 0;
+    left: 40px;
+
+    font-size: 48px;
+
+    font-family: 'Pangolin', cursive;
+    display: inline-block;
+}
+
+.cabecalho-post {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titulo{
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.data-pub {
+  color: rgba(0,0,0, 0.5);
+}
+.conteudo, .data-pub {
+  font-family: 'Neucha', cursive;
+}
+.conteudo{
+  font-size: 19px;
+}

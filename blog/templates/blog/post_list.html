@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCtype html>
 
 <html lang="pt-br">
@@ -5,19 +6,30 @@
 <head>
     <title>My Blog</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Neucha" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Django Blog</h1>
-    <section>
-      {% for post in posts %}
-          <article>
-              <p>Published: {{ post.published_date }}</p>
-              <h1>{{ post.title }}</h1>
-              <p>{{ post.text|linebreaksbr }}</p>
-          </article>
-      {% endfor %}
-    </section>
+    <header class="cabecalho-pagina">
+        <h1>Django Blog</h1>
+    </header>
+    <div class="site">
+      <section>
+        {% for post in posts %}
+            <article>
+                <header class="cabecalho-post">
+                  <h1 class="titulo">{{ post.title }}</h1>
+                  <p class="data-pub">{{ post.published_date }}</p>
+                </header>
+                <p class="conteudo">{{ post.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
+      </section>
+    </div>
 </body>
 
 </html>
