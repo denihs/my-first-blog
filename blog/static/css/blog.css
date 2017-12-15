@@ -79,12 +79,6 @@ article {
   font-size: 19px;
 }
 
-@media all and  (max-width: 501px){
-  .cabecalho-pagina {
-    transform: scale(0);
-  }
-
-}
 @media all and  (max-width: 500px){
 
   .cabecalho-post h1{
@@ -99,7 +93,7 @@ article {
   }
 
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
   .cabecalho-post h1{
     text-align: center;
     font-size: 48px;
