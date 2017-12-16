@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-     <script src="{% static 'js/script.js' %}" ></script>
+     <script src="{% static 'js/Script.js' %}" ></script>
 
     <link rel="stylesheet" href="{% static 'css/blogi.css' %}" />
     <link rel="stylesheet" href="{% static 'css/cell.css' %}" media="(max-width: 320px)" />
@@ -17,13 +17,21 @@
     <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Neucha" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header class="cabecalho-pagina">
-        <a href="#" class="toggleNav menu">☰ Menu</a>
+        <a href="#" class="toggleNav menu">☰ Midias</a>
         <h1 class="">Django Blog</h1>
+
+        <div class="icones">
+          <a href="https://www.facebook.com/profile.php?id=100005599956847" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/_deny.hs_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com/channel/UCBxQQ6UQtFGkvON-DPQrPFA" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        </div>
     </header>
+
     <div class="site">
       <section>
           {% block content %}

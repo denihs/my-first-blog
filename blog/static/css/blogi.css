@@ -3,29 +3,7 @@ body {
 
 }
 
-.site {
-  margin: 5px auto;
-  min-width: 350px;
-  width: 90vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.5s linear;
-
-}
-
-.titulo {
-    color: black;
-  text-align: left;
-}
-
-article {
-  margin: 10px 10px 30px;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
-  padding: 0 10px;
-}
-
+/*----------------CABEÇALHO DO SITE-----------------*/
 .cabecalho-pagina {
   margin: 0;
   height: 120px;
@@ -37,12 +15,23 @@ article {
   display: flex;
   align-items: center;
 
+  justify-content: space-between;
 
   transition: all 0.5s linear;
 
 
 }
+.cabecalho-pagina h1{
+  color: white;
+  margin: 0 0 0 30px;
+  padding: 0;
+  left: 40px;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 48px;
 
+  font-family: 'Pangolin', cursive;
+  display: inline-block;
+}
 .menu {
   color:white;
   font-weight: 100;
@@ -55,21 +44,32 @@ article {
   text-align: center;
   transition:all 0.5s;
 }
+
 .toggleNav {
   display: none;
 }
+/*---------------CONFIGS DO CORPO DO SITE*/
+
+.site {
+  margin: 5px auto;
+  min-width: 350px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s linear;
+
+}
 
 
-.cabecalho-pagina h1{
-    color: white;
-    margin: 0 0 0 30px;
-    padding: 0;
-    left: 40px;
 
-    font-size: 48px;
 
-    font-family: 'Pangolin', cursive;
-    display: inline-block;
+/*--------------------CONFIGS DA ESTRUTURA DAS POSTAGENS ---------------------*/
+article {
+  margin: 10px 10px 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  padding: 0 10px;
 }
 
 .cabecalho-post {
@@ -112,6 +112,19 @@ article {
 }
 
 
+/* -----------------ICONES-------------*/
+.icones {
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  font-size: 30px;
+}
+.icones a{
+  color: black;
+}
+
+
+/* -----------------TELAS MENORES-------------*/
 @media all and  (max-width: 500px){
 
   .cabecalho-post h1{
@@ -125,14 +138,22 @@ article {
         flex-direction: column;
         height: auto;
   }
-  .cabecalho-pagina h1{
-      display: none;
-  }
   .toggleNav {
     display: block;
   }
-
-    .cabecalho-pagina h1.open {
+  /*Escondendo e mostrando o titulo*/
+  .cabecalho-pagina h1{
+    display: none;
+  }
+  .cabecalho-pagina h1.open {
     display:flex;
   }
+  /*Escondendo e mostrando as redes*/
+  .icones {
+    display: none;
+  }
+  .icones.open {
+    display: flex;
+  }
+
 }
