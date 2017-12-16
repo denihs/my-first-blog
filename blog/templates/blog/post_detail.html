@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+      <section class="post-datail">
+        <article>
+            <header class="cabecalho-post">
+              <h1 class="titulo"> {{ post.title }} </h1>
+              <p class="data-pub">{{ post.published_date }}</p>
+            </header>
+            <p class="conteudo">{{ post.text|linebreaksbr }}</p>
+        </article>
+      </section>
+{% endblock %}

@@ -1,42 +1,14 @@
-{% load staticfiles %}
-<!DOCtype html>
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% for post in posts %}
 
-<html lang="pt-br">
+          <article>
+              <header class="cabecalho-post">
+                <h1 class="titulo"> <a class="link-detail" href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} </a> </h1>
+                <p class="data-pub">{{ post.published_date }}</p>
+              </header>
+              <p class="conteudo">{{ post.pre_text|linebreaksbr }}</p>
+          </article>
 
-<head>
-    <title>My Blog</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width">
-
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-     <script src="{% static 'js/script.js' %}" ></script>
-
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/cell.css' %}" media="(max-width: 320px)" />
-
-    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Neucha" rel="stylesheet">
-</head>
-
-<body>
-    <header class="cabecalho-pagina">
-        <a href="#" class="toggleNav">☰ Menu</a>
-        <h1 class="">Django Blog</h1>
-    </header>
-    <div class="site">
-      <section>
-        {% for post in posts %}
-            <article>
-                <header class="cabecalho-post">
-                  <h1 class="titulo">{{ post.title }}</h1>
-                  <p class="data-pub">{{ post.published_date }}</p>
-                </header>
-                <p class="conteudo">{{ post.text|linebreaksbr }}</p>
-            </article>
-        {% endfor %}
-      </section>
-    </div>
-</body>
-
-</html>
+    {% endfor %}
+{% endblock %}

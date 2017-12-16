@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCtype html>
+
+<html lang="pt-br">
+
+<head>
+    <title>My Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script src="{% static 'js/script.js' %}" ></script>
+
+    <link rel="stylesheet" href="{% static 'css/blogi.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/cell.css' %}" media="(max-width: 320px)" />
+
+    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Neucha" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho-pagina">
+        <a href="#" class="toggleNav menu">☰ Menu</a>
+        <h1 class="">Django Blog</h1>
+    </header>
+    <div class="site">
+      <section>
+          {% block content %}
+          {% endblock %}
+      </section>
+    </div>
+</body>
+
+</html>

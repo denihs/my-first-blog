@@ -43,7 +43,7 @@ article {
 
 }
 
-a {
+.menu {
   color:white;
   font-weight: 100;
   letter-spacing: 2px;
@@ -95,6 +95,22 @@ a {
 .conteudo{
   font-size: 19px;
 }
+
+.link-detail{
+  text-decoration: none;
+  color: black;
+}
+
+.post-datail .cabecalho-post{
+    flex-direction: column;
+}
+.post-datail .cabecalho-post h1{
+    font-size: 48px;
+}
+.post-datail .cabecalho-post p{
+    align-self: flex-start;
+}
+
 
 @media all and  (max-width: 500px){
 
