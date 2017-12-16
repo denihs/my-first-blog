@@ -8,6 +8,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width">
 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script src="{% static 'js/script.js' %}" ></script>
+
     <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
     <link rel="stylesheet" href="{% static 'css/cell.css' %}" media="(max-width: 320px)" />
 
@@ -18,7 +21,8 @@
 
 <body>
     <header class="cabecalho-pagina">
-        <h1>Django Blog</h1>
+        <a href="#" class="toggleNav">☰ Menu</a>
+        <h1 class="">Django Blog</h1>
     </header>
     <div class="site">
       <section>

@@ -6,5 +6,21 @@
   display: inline;
 }
 .cabecalho-pagina {
+      flex-direction: column;
+      height: auto;
+}
+.cabecalho-pagina h1{
     display: none;
+}
+.toggleNav {
+  display: block;
+}
+
+  .cabecalho-pagina h1.open {
+  display:flex;
+}
+
+
+.toggleNav {
+  display: block;
 }

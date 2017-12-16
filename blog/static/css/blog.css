@@ -37,9 +37,26 @@ article {
   display: flex;
   align-items: center;
 
+
   transition: all 0.5s linear;
 
 
+}
+
+a {
+  color:white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition:all 0.5s;
+}
+.toggleNav {
+  display: none;
 }
 
 
@@ -89,7 +106,17 @@ article {
     display: inline;
   }
   .cabecalho-pagina {
+        flex-direction: column;
+        height: auto;
+  }
+  .cabecalho-pagina h1{
       display: none;
   }
+  .toggleNav {
+    display: block;
+  }
 
+    .cabecalho-pagina h1.open {
+    display:flex;
+  }
 }
