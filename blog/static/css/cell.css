@@ -8,6 +8,7 @@
 .cabecalho-pagina {
       flex-direction: column;
       height: auto;
+      width: 100vw;
 }
 .cabecalho-pagina h1{
     display: none;
