@@ -21,7 +21,10 @@ body {
 
 
 }
-.cabecalho-pagina h1{
+.cabecalho-pagina a {
+    text-decoration: none;
+}
+.cabecalho-pagina h1 {
   color: white;
   margin: 0 0 0 30px;
   padding: 0;
