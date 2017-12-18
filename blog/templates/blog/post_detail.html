@@ -4,8 +4,16 @@
       <section class="post-datail">
         <article>
             <header class="cabecalho-post">
-              <h1 class="titulo"> {{ post.title }} </h1>
+
+              <div class="cabecalho-edit">
+                <h1 class="titulo"> {{ post.title }} </h1>
+                  {% if user.is_authenticated %}
+                    <a href="{% url 'post_edit' pk=post.pk %}"><i class="fa fa-pencil edit-post" aria-hidden="true"></i></a>
+                  {% endif %}
+              </div>
+
               <p class="data-pub">{{ post.published_date }}</p>
+
             </header>
             <p class="conteudo">{{ post.text|linebreaksbr }}</p>
         </article>
